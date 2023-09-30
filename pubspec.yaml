@@ -1,10 +1,7 @@
 name: dart_code_metrics
-version: 5.7.4
-description: Software analytics tool that helps developers analyse and improve software quality.
-homepage: https://dcm.dev/
-repository: https://github.com/dart-code-checker/dart-code-metrics
-issue_tracker: https://github.com/dart-code-checker/dart-code-metrics/issues
-documentation: https://dcm.dev/docs/individuals/getting-started/
+version: 6.0.0
+description: MIT-licensed fork of dart_code_metrics
+publish_to: none
 
 environment:
   sdk: ">=2.18.0 <3.0.0"
@@ -21,7 +18,10 @@ dependencies:
   args: ^2.0.0
   collection: ^1.16.0
   crypto: ^3.0.0
-  dart_code_metrics_presets: ^1.0.1
+  dart_code_metrics_presets:
+    git:
+      url: https://github.com/androidseb/dart-code-metrics-presets.git
+      ref: dcmp_mit_fork
   file: ^6.0.0
   glob: ^2.0.1
   html: ">=0.15.0 <1.0.0"
