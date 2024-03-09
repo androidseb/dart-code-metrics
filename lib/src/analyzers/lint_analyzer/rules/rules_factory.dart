@@ -53,6 +53,7 @@ import 'rules_list/no_equal_then_else/no_equal_then_else_rule.dart';
 import 'rules_list/no_magic_number/no_magic_number_rule.dart';
 import 'rules_list/no_object_declaration/no_object_declaration_rule.dart';
 import 'rules_list/prefer_async_await/prefer_async_await_rule.dart';
+import 'rules_list/prefer_async_future_functions/prefer_async_future_functions_rule.dart';
 import 'rules_list/prefer_commenting_analyzer_ignores/prefer_commenting_analyzer_ignores.dart';
 import 'rules_list/prefer_conditional_expressions/prefer_conditional_expressions_rule.dart';
 import 'rules_list/prefer_const_border_radius/prefer_const_border_radius_rule.dart';
@@ -170,6 +171,7 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   PreferUsingListViewRule.ruleId: PreferUsingListViewRule.new,
   ProvideCorrectIntlArgsRule.ruleId: ProvideCorrectIntlArgsRule.new,
   TagNameRule.ruleId: TagNameRule.new,
+  PreferAsyncFutureFunctionsRule.ruleId: PreferAsyncFutureFunctionsRule.new,
 };
 
 Iterable<String> get allRuleIds => _implementedRules.keys;
