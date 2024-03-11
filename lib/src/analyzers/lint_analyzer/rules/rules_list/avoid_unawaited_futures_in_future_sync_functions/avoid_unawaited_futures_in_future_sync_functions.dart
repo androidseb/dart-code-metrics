@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs
 
 import 'package:analyzer/dart/ast/ast.dart';
-import 'package:analyzer/dart/ast/token.dart';
 import 'package:analyzer/dart/ast/visitor.dart';
 import 'package:analyzer/dart/element/type.dart';
 
@@ -15,16 +14,18 @@ import '../../rule_utils.dart';
 
 part 'visitor.dart';
 
-/// Because unawaited_futures doesn't work when method/function is not marked async:
+/// Because the unawaited_futures lint doesn't work when the containing method/function is not marked async:
 /// https://github.com/dart-lang/linter/issues/836
-/// a workaround is to ensure all functions returning a future are annotated with 'async'.
-/// This rules helps ensure those annotations aren't missing.
-class PreferAsyncFutureFunctionsRule extends CommonRule {
-  static const String ruleId = 'prefer-async-future-functions';
+/// this rule aims to cover this case: if a Future function call is made from a function/method returning a Future
+/// and that is not marked 'async', and the function call is not directly wrapped under another
+/// function call (e.g. 'unawaited()'), then this rule will trigger.
+class AvoidUnawaitedFuturesInFutureSyncFunctions extends CommonRule {
+  static const String ruleId = 'avoid-unawaited-futures-in-future-sync-functions';
 
-  static const _warningMessage = "Future functions should declare the 'async' keyword.";
+  static const _warningMessage =
+      "Future function call from a sync function returning a Future: wrap this Future function call inside 'unawaited()', or annotate the parent function 'async'";
 
-  PreferAsyncFutureFunctionsRule([Map<String, Object> config = const {}])
+  AvoidUnawaitedFuturesInFutureSyncFunctions([Map<String, Object> config = const {}])
       : super(
           id: ruleId,
           severity: readSeverity(config, Severity.warning),
