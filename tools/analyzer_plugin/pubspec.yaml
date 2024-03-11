@@ -6,7 +6,10 @@ environment:
   sdk: ">=2.14.0 <3.0.0"
 
 dependencies:
-  dart_code_metrics: 5.7.4
+  dart_code_metrics:
+    git:
+      url: https://github.com/androidseb/dart-code-metrics.git
+      ref: dcm_mit_fork
 
 dev_dependencies:
   lints: ^1.0.1
