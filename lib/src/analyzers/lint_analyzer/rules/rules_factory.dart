@@ -27,6 +27,7 @@ import 'rules_list/avoid_shrink_wrap_in_lists/avoid_shrink_wrap_in_lists_rule.da
 import 'rules_list/avoid_substring/avoid_substring_rule.dart';
 import 'rules_list/avoid_throw_in_catch_block/avoid_throw_in_catch_block_rule.dart';
 import 'rules_list/avoid_top_level_members_in_tests/avoid_top_level_members_in_tests_rule.dart';
+import 'rules_list/avoid_unawaited_futures_in_future_sync_functions/avoid_unawaited_futures_in_future_sync_functions.dart';
 import 'rules_list/avoid_unnecessary_conditionals/avoid_unnecessary_conditionals_rule.dart';
 import 'rules_list/avoid_unnecessary_setstate/avoid_unnecessary_setstate_rule.dart';
 import 'rules_list/avoid_unnecessary_type_assertions/avoid_unnecessary_type_assertions_rule.dart';
@@ -86,8 +87,7 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   AvoidBannedImportsRule.ruleId: AvoidBannedImportsRule.new,
   AvoidBorderAllRule.ruleId: AvoidBorderAllRule.new,
   AvoidCascadeAfterIfNullRule.ruleId: AvoidCascadeAfterIfNullRule.new,
-  AvoidCollectionMethodsWithUnrelatedTypesRule.ruleId:
-      AvoidCollectionMethodsWithUnrelatedTypesRule.new,
+  AvoidCollectionMethodsWithUnrelatedTypesRule.ruleId: AvoidCollectionMethodsWithUnrelatedTypesRule.new,
   AvoidCreatingVectorInUpdateRule.ruleId: AvoidCreatingVectorInUpdateRule.new,
   AvoidDoubleSlashImportsRule.ruleId: AvoidDoubleSlashImportsRule.new,
   AvoidDuplicateExportsRule.ruleId: AvoidDuplicateExportsRule.new,
@@ -96,14 +96,11 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   AvoidIgnoringReturnValuesRule.ruleId: AvoidIgnoringReturnValuesRule.new,
   AvoidInitializingInOnMountRule.ruleId: AvoidInitializingInOnMountRule.new,
   AvoidLateKeywordRule.ruleId: AvoidLateKeywordRule.new,
-  AvoidMissingEnumConstantInMapRule.ruleId:
-      AvoidMissingEnumConstantInMapRule.new,
-  AvoidNestedConditionalExpressionsRule.ruleId:
-      AvoidNestedConditionalExpressionsRule.new,
+  AvoidMissingEnumConstantInMapRule.ruleId: AvoidMissingEnumConstantInMapRule.new,
+  AvoidNestedConditionalExpressionsRule.ruleId: AvoidNestedConditionalExpressionsRule.new,
   AvoidNonAsciiSymbolsRule.ruleId: AvoidNonAsciiSymbolsRule.new,
   AvoidNonNullAssertionRule.ruleId: AvoidNonNullAssertionRule.new,
-  AvoidPassingAsyncWhenSyncExpectedRule.ruleId:
-      AvoidPassingAsyncWhenSyncExpectedRule.new,
+  AvoidPassingAsyncWhenSyncExpectedRule.ruleId: AvoidPassingAsyncWhenSyncExpectedRule.new,
   AvoidPreserveWhitespaceFalseRule.ruleId: AvoidPreserveWhitespaceFalseRule.new,
   AvoidRedundantAsyncRule.ruleId: AvoidRedundantAsyncRule.new,
   AvoidRedundantAsyncOnLoadRule.ruleId: AvoidRedundantAsyncOnLoadRule.new,
@@ -115,8 +112,7 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   AvoidUnnecessaryConditionalsRule.ruleId: AvoidUnnecessaryConditionalsRule.new,
   AvoidUnnecessarySetStateRule.ruleId: AvoidUnnecessarySetStateRule.new,
   UseSetStateSynchronouslyRule.ruleId: UseSetStateSynchronouslyRule.new,
-  AvoidUnnecessaryTypeAssertionsRule.ruleId:
-      AvoidUnnecessaryTypeAssertionsRule.new,
+  AvoidUnnecessaryTypeAssertionsRule.ruleId: AvoidUnnecessaryTypeAssertionsRule.new,
   AvoidUnnecessaryTypeCastsRule.ruleId: AvoidUnnecessaryTypeCastsRule.new,
   AvoidUnrelatedTypeAssertionsRule.ruleId: AvoidUnrelatedTypeAssertionsRule.new,
   AvoidUnusedParametersRule.ruleId: AvoidUnusedParametersRule.new,
@@ -124,10 +120,8 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   AvoidExpandedAsSpacerRule.ruleId: AvoidExpandedAsSpacerRule.new,
   BanNameRule.ruleId: BanNameRule.new,
   BinaryExpressionOperandOrderRule.ruleId: BinaryExpressionOperandOrderRule.new,
-  CheckForEqualsInRenderObjectSettersRule.ruleId:
-      CheckForEqualsInRenderObjectSettersRule.new,
-  ComponentAnnotationArgumentsOrderingRule.ruleId:
-      ComponentAnnotationArgumentsOrderingRule.new,
+  CheckForEqualsInRenderObjectSettersRule.ruleId: CheckForEqualsInRenderObjectSettersRule.new,
+  ComponentAnnotationArgumentsOrderingRule.ruleId: ComponentAnnotationArgumentsOrderingRule.new,
   ConsistentUpdateRenderObjectRule.ruleId: ConsistentUpdateRenderObjectRule.new,
   CorrectGameInstantiatingRule.ruleId: CorrectGameInstantiatingRule.new,
   DoubleLiteralFormatRule.ruleId: DoubleLiteralFormatRule.new,
@@ -146,10 +140,8 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   PreferCommentingAnalyzerIgnores.ruleId: PreferCommentingAnalyzerIgnores.new,
   PreferConditionalExpressionsRule.ruleId: PreferConditionalExpressionsRule.new,
   PreferConstBorderRadiusRule.ruleId: PreferConstBorderRadiusRule.new,
-  PreferCorrectEdgeInsetsConstructorRule.ruleId:
-      PreferCorrectEdgeInsetsConstructorRule.new,
-  PreferCorrectIdentifierLengthRule.ruleId:
-      PreferCorrectIdentifierLengthRule.new,
+  PreferCorrectEdgeInsetsConstructorRule.ruleId: PreferCorrectEdgeInsetsConstructorRule.new,
+  PreferCorrectIdentifierLengthRule.ruleId: PreferCorrectIdentifierLengthRule.new,
   PreferCorrectTestFileNameRule.ruleId: PreferCorrectTestFileNameRule.new,
   PreferCorrectTypeNameRule.ruleId: PreferCorrectTypeNameRule.new,
   PreferDefineHeroTagRule.ruleId: PreferDefineHeroTagRule.new,
@@ -170,11 +162,11 @@ final _implementedRules = <String, Rule Function(Map<String, Object>)>{
   PreferUsingListViewRule.ruleId: PreferUsingListViewRule.new,
   ProvideCorrectIntlArgsRule.ruleId: ProvideCorrectIntlArgsRule.new,
   TagNameRule.ruleId: TagNameRule.new,
+  AvoidUnawaitedFuturesInFutureSyncFunctions.ruleId: AvoidUnawaitedFuturesInFutureSyncFunctions.new,
 };
 
 Iterable<String> get allRuleIds => _implementedRules.keys;
 
-Iterable<Rule> getRulesById(Map<String, Map<String, Object>> rulesConfig) =>
-    List.unmodifiable(_implementedRules.keys
-        .where((id) => rulesConfig.keys.contains(id))
-        .map<Rule>((id) => _implementedRules[id]!(rulesConfig[id]!)));
+Iterable<Rule> getRulesById(Map<String, Map<String, Object>> rulesConfig) => List.unmodifiable(_implementedRules.keys
+    .where((id) => rulesConfig.keys.contains(id))
+    .map<Rule>((id) => _implementedRules[id]!(rulesConfig[id]!)));
