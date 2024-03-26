@@ -22,14 +22,14 @@ dependencies:
     git:
       url: https://github.com/androidseb/dart-code-metrics-presets.git
       ref: dcmp_mit_fork
-  file: ^6.0.0
+  file: ^7.0.0
   glob: ^2.0.1
   html: ">=0.15.0 <1.0.0"
   http: ^1.1.0
   meta: ^1.7.0
   path: ^1.8.0
   platform: ^3.1.0 # overridden for lowest versions compatibility
-  pub_updater: ^0.3.0
+  pub_updater: ^0.4.0
   source_span: ^1.8.0
   uuid: ^4.0.0
   xml: ">=5.3.0 <7.0.0"
